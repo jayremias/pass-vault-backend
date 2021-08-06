@@ -1,3 +1,3 @@
-import { container } from 'tsyringe'
+import { container } from 'tsyringe';
 
-export default container
+export default container;
