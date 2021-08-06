@@ -1,0 +1,25 @@
+version: '3.9'
+
+services:
+  db:
+    image: mysql:5.7
+    container_name: database
+    volumes:
+      - db_data:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: pass-vault-root
+      MYSQL_DATABASE: pass-vault
+      MYSQL_USER: pass-vault
+      MYSQL_PASSWORD: pass-vault
+  app:
+    depends_on:
+      - db
+    container_name: node
+    build: .
+    ports:
+      - '3000:3000'
+      - '9229:9229'
+    volumes:
+      - .:/usr/app
+volumes:
+  db_data:
