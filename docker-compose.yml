@@ -11,6 +11,8 @@ services:
       MYSQL_DATABASE: pass-vault
       MYSQL_USER: pass-vault
       MYSQL_PASSWORD: pass-vault
+    ports: 
+      - '3306:3306'
   app:
     depends_on:
       - db

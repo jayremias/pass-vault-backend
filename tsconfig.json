@@ -4,18 +4,18 @@
     "module": "commonjs",
     "outDir": "./build",
     "rootDir": "./",
-    "strict": true,
     "baseUrl": ".",
     "paths": {
+      "@modules/*": ["./src/modules/*"],
       "@shared/*": ["./src/shared/*"],
       "@errors/*": ["./src/shared/errors/*"],
-      "@modules/*": ["./src/modules/*"],
       "@config/*": ["./src/config/*"]
     },
     "esModuleInterop": true,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true
   }
 }

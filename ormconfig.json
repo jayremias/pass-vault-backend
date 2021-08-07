@@ -1,0 +1,15 @@
+[
+  {
+    "type": "mysql",
+    "port": 3306,
+    "host": "db",
+    "username": "pass-vault",
+    "password": "pass-vault",
+    "database": "pass-vault",
+    "migrations": ["./src/shared/infra/typeorm/migrations/*.ts"],
+    "entities": ["./src/modules/**/infra/typeorm/entities/*.ts"],
+    "cli": {
+      "migrationsDir": "./src/shared/infra/typeorm/migrations"
+    }
+  }
+]

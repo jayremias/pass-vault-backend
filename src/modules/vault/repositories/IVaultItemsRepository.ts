@@ -1,0 +1,3 @@
+class IVaultItemsRepository {}
+
+export { IVaultItemsRepository };
