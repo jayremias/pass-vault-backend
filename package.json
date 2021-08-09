@@ -8,7 +8,7 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "test": "jest",
+    "test": "NODE_ENV=test jest --setupFiles dotenv/config",
     "dev": "ts-node-dev -r tsconfig-paths/register --inspect=0.0.0.0:9229 --respawn --transpile-only --poll --no-deps -- src/shared/infra/http/server.ts",
     "typeorm": "ts-node-dev -t tsconfig-paths/register ./node_modules/typeorm/cli"
   },
@@ -31,6 +31,7 @@
     "@types/express": "^4.17.11",
     "@types/jest": "^26.0.23",
     "@types/jsonwebtoken": "^8.5.1",
+    "@types/node": "^16.4.13",
     "@types/supertest": "^2.0.11",
     "@types/swagger-ui-express": "^4.1.2",
     "@types/uuid": "^8.3.0",
